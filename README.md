@@ -20,9 +20,9 @@ nvm install 4.1.1
 
 这样会报警告
 
-···
+···  
 nvm is not compatible with the npm config "prefix" option: currently set to "/home/peter/.npm-global"
-Run `npm config delete prefix` or `nvm use --delete-prefix v4.1.1` to unset it.
+Run `npm config delete prefix` or `nvm use --delete-prefix v4.1.1` to unset it.  
 ···
 
 这是由于咱们自己做的 prefix 造成的。解决方法
@@ -30,7 +30,7 @@ Run `npm config delete prefix` or `nvm use --delete-prefix v4.1.1` to unset it.
 ```
 mv .npmrc npmrc
 nvm install 4.1.1
-mv .npmrc npmrc
+mv npmrc .npmrc
 ```
 
 这样
